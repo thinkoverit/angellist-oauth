@@ -9,3 +9,5 @@ This Class Uses
 		- CodeIgniter system library session.php
 		- CodeIgniter system helper url.php
 		- CodeIgniter system library session.php
+
+Code is inspired from Twitter Library from Elliot Haughin (http://www.haughin.com)

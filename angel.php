@@ -4,7 +4,7 @@
  * 
  * Author: Pandurang Zambare, pandu@thinkoverit.com
  * 
- * This is Conteller Class for Codeigniter Framework.
+ * This is Controller Class for Codeigniter Framework.
  **/
 class angel extends Controller 
 {
