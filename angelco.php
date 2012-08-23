@@ -1,5 +1,18 @@
 <?php
-
+/**
+ * CodeIgniter Angel.co API Library (http://thinkoverit.com)
+ * 
+ * Author: Pandurang Zambare, pandu@thinkoverit.com
+ *
+ * This is Librarry Class for Codeigniter Framework.
+ * ========================================================
+ * REQUIRES: php5, curl, json_decode
+ * ========================================================
+ * 
+ * VERSION: 1.0 (Dec 2011)
+ * LICENSE: GNU GENERAL PUBLIC LICENSE - Version 2, June 1991
+ * 
+ **/
 class Angelco {
 	
 	private $_oauth = NULL;
@@ -66,7 +79,6 @@ class angelcoException extends Exception {
 
 class angelcoConnection {
 	
-	// Allow multi-threading.
 	
 	private $_mch = NULL;
 	private $_properties = array();
@@ -111,7 +123,6 @@ class angelcoConnection {
 	
 	public function post($url, $params)
 	{
-		// Todo
 		$post = '';
 		
 		foreach ( $params as $k => $v )
@@ -148,11 +159,7 @@ class angelcoConnection {
 	
 	private function _addCurl($url, $params = array())
 	{
-//			if ( !empty($params['oauth']) )
-//			{
-//				$this->_addOauthHeaders($this->_ch, $url, $params['oauth']);
-//			}
-		
+
 		$ch = $this->_ch;
 		
 		$key = (string) $ch;
@@ -293,7 +300,6 @@ class angelcoOauth extends angelcoConnection {
 		$this->_obj =& get_instance();
 		$this->_obj->load->config('angellist_config');
 		$this->_obj->load->library('session');
-		$this->_obj->load->library('unit_test');
 		$this->_obj->load->helper('url');
 		
 		$this->_tokens =$this->_getAccessSecret();
